@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Info</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .social-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-links li {
+      margin: 0 0.5rem;
+    }
+
+    .social-links li a {
+      color: #333;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links li a:hover {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="profile-image" src="https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGdpcmx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Profile Image">
+    <h1>Your Name</h1>
+    <p>Front-end Developer</p>
+    <ul class="social-links">
+      <li><a href="https://twitter.com/your_twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://linkedin.com/in/your_linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/your_github" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
+  </div>
+</body>
+</html>
