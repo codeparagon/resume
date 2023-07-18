@@ -58,6 +58,134 @@
     .social-links li a:hover {
       color: #ff0000;
     }
+
+    /*aahmar*/
+
+    @font-face {
+  font-family: "Grotesque";
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.eot');
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.ttf') format('truetype'),
+       url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+/* ... More @font-face declarations for different fonts ... */
+
+/* Variables */
+:root {
+  --big-stone: #152536;
+  --white: #fff;
+  --smalt-blue: #4e958b;
+  --maroon-flush: #C32361;
+  --black: #000;
+  --lite-grey: rgba(0, 0, 0, 0.2);
+  --lite-big-stone: rgba(21, 37, 54, 0.7);
+
+  --card-width: 350px;
+  --card-height: 350px;
+  --thumb-height: 260px;
+
+  --border-radius: 3px;
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  --transition: cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  --timing-1: 0.4s 0.15s;
+  --timing-2: 0.5s 0.25s;
+}
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  background: var(--big-stone);
+}
+ */
+a[href] {
+  position: relative;
+  text-decoration: none;
+  color: lighten(var(--maroon-flush), 5);
+  text-shadow: 2px 2px 2px darken(var(--big-stone), 10);
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+a[href]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--white);
+  width: 0;
+  height: 1px;
+  transition: 0.35s var(--transition);
+}
+
+a[href]:hover::after {
+  width: 100%;
+  box-shadow: var(--box-shadow);
+}
+
+/* .note styles here */
+
+article.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--card-width);
+  height: var(--card-height);
+  transform: translate(-50%, -50%) translateZ(0);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+article.card .thumb {
+  width: auto;
+  height: var(--thumb-height);
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png') no-repeat center;
+  background-size: cover;
+  border-radius: var(--border-radius);
+}
+
+article.card .infos {
+  width: auto;
+  height: var(--card-height);
+  position: relative;
+  padding: 14px 24px;
+  background: var(--white);
+  transition: var(--timing-1) var(--transition);
+}
+
+article.card .infos .title {
+  position: relative;
+  margin: 10px 0;
+  letter-spacing: 3px;
+  color: var(--big-stone);
+  font-family: "Grotesque Black", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0 var(--lite-big-stone);
+}
+
+/* ... More styles for other elements within .infos ... */
+
+article.card:hover .infos {
+  transform: translateY(calc(-1 * var(--thumb-height)));
+}
+
+article.card:hover .infos .seats, article.card:hover .infos .txt, article.card:hover .infos .details {
+  opacity: 1;
+}
+
+    
   </style>
 </head>
 <body>
@@ -71,5 +199,20 @@
       <li><a href="https://github.com/your_github" target="_blank"><i class="fab fa-github"></i></a></li>
     </ul>
   </div>
+
+
+  <article class="card">
+    <div class="thumb"></div>
+    <div class="infos">
+        <h2 class="title">new york city <span class="flag"></span></h2>
+        <h3 class="date">november 2 - 4</h3>
+        <h3 class="seats">seats remaining: 2</h3>
+        <p class="txt">
+          Join us for our Live Infinity Session in beautiful New York City. This is a 3-day intensive workshop where you'll learn how to become a better version of...
+        </p>
+        <h3 class="details">event details</h3>
+      </div>
+  </article>
+
 </body>
 </html>
