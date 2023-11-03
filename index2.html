@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+     <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+        
+        .service-feature-container {
+        display: flex;
+        height: 80vh;
+        /*   background:pink; */
+        /*   flex-direction:row-reverse; */
+        }
+        .service-feature-container .image-container {
+        flex: 1;
+        }
+        .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: polygon(20% 1%, 79% 18%, 100% 30%, 100% 70%, 80% 94%, 30% 100%, 0 81%, 0% 30%);
+        /*   transform:rotate(180deg); */
+        }
+        .service-feature-container .text-container {
+        flex: 1;
+        align-self: center;
+        }
+
+        .text-container .service-title h1 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        color: #080808;
+        -webkit-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+        }
+        .text-container .service-title h1:before {
+        width: 28px;
+        height: 6px;
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -2.5px;
+        left: 50%;
+        margin-left: -14px;
+        background-color: #b80000;
+        }
+        .text-container .service-title h1:after {
+        width: 80%;
+        height: 1px;
+        display: block;
+        content: "";
+        position: relative;
+        margin-top: 10px;
+        left: 50%;
+        /*   margin-left: -150px; */
+        transform: translateX(-50%);
+        background-color: #b80000;
+        }
+
+        .text-container .service-list-container {
+        margin-top: 20px;
+        }
+        .text-container .service-list-container ul {
+        width: 80%;
+        margin: 0 auto;
+        list-style: none;
+        }
+        .text-container .service-list-container ul li {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        }
+
+        .text-container .service-list-container ul li:before {
+        content: "✓";
+        margin-right: 10px;
+        color: #b80000;
+        }
+
+        @media (max-width: 768px) {
+        .service-feature-container {
+        height: 100vh;
+        }
+        .service-feature-container {
+            flex-direction: column!important;
+        }
+        .service-feature-container .image-container {
+            flex: auto;
+            width: 100%;
+        }
+        .service-feature-container .text-container {
+            flex: auto;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .sp-special {
+            padding: 0 5px;
+        }
+        .text-container .service-list-container ul {
+            width: 98%;
+        }
+        .text-container .service-list-container ul li {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        }
+
+        @media (max-width: 480px) {
+        
+        .text-container .service-list-container ul li {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        }
+
+    </style>    
+
+  </head>
+  <body>
+	
+  
+  <section class="service-feature-container">
+  <div class="image-container">
+      <img class="image" src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aHRtbHxlbnwwfHwwfHx8MA%3D%3D" alt="Service Image">
+  </div>
+  <div class="text-container">
+      <div class="service-title">
+            <h1>Service Title</h1>
+      </div>
+      <div class="service-list-container">
+          <ul>
+             <li>a quick brown fox jumps over the lazy dog</li>
+             <li>a quick brown fox jumps over the lazy dog</li>
+             <li>a quick brown fox jumps over the lazy dog</li>
+             <li>a quick brown fox jumps over the lazy dog</li>
+          </ul>
+      </div> 
+  </div>
+</section>
+
+  
+  </body>
+</html>
